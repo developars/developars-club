@@ -1,3 +1,10 @@
 language: node_js
 node_js: 
   - 12
+script: npm run export
+deploy:
+  provider: script
+  script: npm run deploy
+  skip_cleanup: true
+  on:
+    branch: master
